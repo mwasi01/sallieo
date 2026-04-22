@@ -2,42 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Bazaar & Co. — Get in Touch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>TikTok Shop | SJ & CO — DM to Order</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #fefaf5; color: #161616; }
-    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #fefaf5;
+      color: #161616;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
+      gap: 12px;
       background: #1e1e2a;
       color: white;
-      padding: 12px 28px;
+      padding: 14px 36px;
       border-radius: 60px;
       text-decoration: none;
-      font-weight: 600;
-      transition: 0.25s;
+      font-weight: 700;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      font-size: 1rem;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
+
+    .btn-primary {
+      background: #ff0050;
+      box-shadow: 0 8px 20px rgba(255, 0, 80, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #e60048;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(255, 0, 80, 0.4);
+    }
+
     .btn-outline {
       background: transparent;
-      border: 2px solid #1e1e2a;
-      color: #1e1e2a;
-    }
-    .btn-outline:hover {
-      background: #1e1e2a;
+      border: 2px solid white;
       color: white;
+      box-shadow: none;
     }
+
+    .btn-outline:hover {
+      background: white;
+      color: #1e1e2a;
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: #1e1e2a;
+    }
+
+    .btn-dark:hover {
+      background: #2d2d3f;
+      transform: translateY(-2px);
+    }
+
     header {
-      background: rgba(255,255,245,0.98);
+      background: rgba(255, 255, 245, 0.98);
       position: sticky;
       top: 0;
       z-index: 200;
       border-bottom: 1px solid #f0e3d8;
     }
+
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -45,6 +92,7 @@
       padding: 20px 0;
       flex-wrap: wrap;
     }
+
     .logo {
       font-size: 1.9rem;
       font-weight: 800;
@@ -56,94 +104,245 @@
       align-items: center;
       gap: 8px;
     }
+
     .nav-links {
       display: flex;
       gap: 36px;
       align-items: center;
+      flex-wrap: wrap;
     }
+
     .nav-links a {
       text-decoration: none;
       font-weight: 600;
       color: #2c2c3a;
       transition: 0.2s;
+      font-size: 0.95rem;
     }
-    .nav-links a:hover { color: #e76f51; }
-    .contact-hero {
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #e76f51;
+    }
+
+    .hero-tiktok {
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%);
+      border-radius: 56px;
+      padding: 64px 48px;
       text-align: center;
-      padding: 60px 0 40px;
+      margin: 48px 0 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
     }
-    .contact-hero h1 {
+
+    .hero-tiktok::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 0, 80, 0.15);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-icon {
+      font-size: 3.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .hero-tiktok h1 {
       font-size: 2.8rem;
       font-weight: 800;
       letter-spacing: -0.02em;
+      margin-bottom: 16px;
     }
-    .contact-card {
-      background: white;
-      border-radius: 56px;
-      padding: 48px;
-      box-shadow: 0 25px 45px -12px rgba(0,0,0,0.1);
-      margin: 20px 0 60px;
-      text-align: center;
-    }
-    .social-link {
+
+    .tiktok-handle {
+      background: #ff0050;
       display: inline-flex;
       align-items: center;
-      gap: 14px;
-      background: #101010;
-      color: white;
-      padding: 16px 36px;
+      gap: 12px;
+      padding: 14px 36px;
       border-radius: 80px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin: 16px 8px;
-      transition: 0.2s;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 24px 0;
+      box-shadow: 0 10px 25px rgba(255, 0, 80, 0.3);
     }
-    .social-link.tiktok { background: #ff0050; }
-    .social-link.tiktok:hover { background: #e60048; transform: scale(1.02); }
-    .social-link.email { background: #2c3e66; }
-    .info-row {
+
+    .steps-section {
+      margin: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 48px;
+    }
+
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 4px;
+      background: #e76f51;
+      margin: 16px auto 0;
+      border-radius: 4px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: 32px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .step-number {
+      background: #e76f51;
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin: 28px 0;
-      flex-wrap: wrap;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 auto 20px;
     }
-    .info-badge {
-      background: #fef3e8;
-      padding: 14px 28px;
-      border-radius: 80px;
-      display: inline-flex;
+
+    .step-icon {
+      font-size: 2.5rem;
+      color: #e76f51;
+      margin-bottom: 20px;
+    }
+
+    .step-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .step-card p {
+      color: #4a4a5a;
+      line-height: 1.5;
+    }
+
+    .features-banner {
+      background: linear-gradient(115deg, #2a9d8f10, #e76f5110);
+      border-radius: 48px;
+      padding: 48px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .feature-item {
+      display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 500;
+      background: white;
+      padding: 12px 24px;
+      border-radius: 60px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+
+    .live-section {
+      background: #1e1e2a;
+      border-radius: 48px;
+      padding: 48px;
+      text-align: center;
+      color: white;
+      margin: 40px 0;
+    }
+
+    .faq-section {
+      margin: 60px 0;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-item h4 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
     footer {
       background: #1a1a24;
       color: #ccc;
-      padding: 48px 0 32px;
+      padding: 56px 0 32px;
       text-align: center;
       border-top-left-radius: 40px;
       border-top-right-radius: 40px;
+      margin-top: 60px;
     }
+
     @media (max-width: 780px) {
-      .contact-card { padding: 32px 24px; }
-      .contact-hero h1 { font-size: 2rem; }
+      .container { padding: 0 20px; }
       .navbar { flex-direction: column; gap: 12px; }
-      .social-link { padding: 12px 24px; font-size: 1rem; }
+      .hero-tiktok { padding: 40px 24px; }
+      .hero-tiktok h1 { font-size: 1.8rem; }
+      .tiktok-handle { font-size: 1.1rem; padding: 10px 24px; }
+      .section-title { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
+
 <header>
   <div class="container">
     <div class="navbar">
-      <div class="logo"><i class="fas fa-store"></i> BAZAAR & CO.</div>
+      <div class="logo"><i class="fas fa-store"></i> SJ & CO</div>
       <div class="nav-links">
         <a href="index.html"><i class="fas fa-home"></i> Home</a>
         <a href="products.html"><i class="fas fa-grid-2"></i> All Products</a>
-        <a href="tiktok-shop.html"><i class="fab fa-tiktok"></i> TikTok Shop</a>
+        <a href="tiktok-shop.html" class="active"><i class="fab fa-tiktok"></i> TikTok Shop</a>
         <a href="contact.html"><i class="fas fa-headset"></i> Contact</a>
       </div>
     </div>
@@ -152,49 +351,70 @@
 
 <main>
   <div class="container">
-    <div class="contact-hero">
-      <h1><i class="fas fa-headset"></i> Let's talk</h1>
-      <p style="margin-top: 16px; color: #4a4a5a;">We reply fastest on TikTok DM — reach out anytime!</p>
+    <div class="hero-tiktok">
+      <div class="hero-icon"><i class="fab fa-tiktok"></i></div>
+      <h1>Our TikTok Shop</h1>
+      <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9;">No physical store — we sell everything through TikTok LIVE & DM orders. Fast, simple, and direct.</p>
+      <div class="tiktok-handle"><i class="fab fa-tiktok"></i> @SJAndCo_KE</div>
+      <a href="https://www.tiktok.com/@SJAndCo_KE" target="_blank" class="btn btn-primary"><i class="fab fa-tiktok"></i> Follow & Shop Now</a>
     </div>
 
-    <div class="contact-card">
-      <i class="fab fa-tiktok" style="font-size: 3rem; color: #ff0050;"></i>
-      <h2 style="margin: 16px 0;">Chat with us on TikTok</h2>
-      <a href="https://www.tiktok.com/@BazaarAndCo_KE" target="_blank" class="social-link tiktok">
-        <i class="fab fa-tiktok"></i> @BazaarAndCo_KE
-      </a>
-      <p style="margin: 20px 0;"><strong>📲 DM for orders, sizing help, and delivery updates</strong><br>We typically respond within 2-4 hours.</p>
-      
-      <div class="info-row">
-        <div class="info-badge"><i class="fas fa-envelope"></i> bazaar.kenya@bazaarco.com</div>
-        <div class="info-badge"><i class="fas fa-phone-alt"></i> WhatsApp (soon) +254 700 000 000</div>
-      </div>
-      
-      <hr style="margin: 32px 0; border-color: #eee;">
-      
-      <h3><i class="fas fa-store"></i> Business inquiries</h3>
-      <p style="margin: 12px 0;">For wholesale, partnerships, or bulk orders:<br>
-      <strong>📧 partners@bazaarco.com</strong> (husband can edit this email)</p>
-      
-      <div style="margin-top: 36px;">
-        <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        <a href="products.html" class="btn" style="margin-left: 12px; background: #e76f51;"><i class="fas fa-bag-shopping"></i> Start Shopping</a>
+    <div class="steps-section">
+      <h2 class="section-title">How to order in 4 simple steps</h2>
+      <div class="steps-grid">
+        <div class="step-card"><div class="step-number">1</div><div class="step-icon"><i class="fab fa-tiktok"></i></div><h3>Follow us</h3><p>Follow <strong>@SJAndCo_KE</strong> on TikTok to see live demos and new arrivals daily.</p></div>
+        <div class="step-card"><div class="step-number">2</div><div class="step-icon"><i class="fas fa-mobile-alt"></i></div><h3>Browse & screenshot</h3><p>Check products on our website or TikTok videos. Screenshot the item you love.</p></div>
+        <div class="step-card"><div class="step-number">3</div><div class="step-icon"><i class="fas fa-comment-dots"></i></div><h3>DM us on TikTok</h3><p>Send the screenshot, your size/color preference, and delivery address.</p></div>
+        <div class="step-card"><div class="step-number">4</div><div class="step-icon"><i class="fas fa-money-bill-wave"></i></div><h3>Pay & get delivered</h3><p>We'll reply with M-Pesa details. Delivery within 3-5 days across Kenya.</p></div>
       </div>
     </div>
 
-    <div style="background: #f4e4d4; border-radius: 48px; padding: 32px; text-align: center; margin-bottom: 60px;">
-      <i class="fas fa-clock" style="font-size: 2rem; color: #e76f51;"></i>
-      <h3 style="margin: 12px 0;">Customer Support Hours</h3>
-      <p>Monday - Saturday: 9AM - 8PM (EAT)<br>Sunday: Closed for restocking — but DM us anytime!</p>
+    <div class="features-banner">
+      <i class="fas fa-check-circle" style="font-size: 2.5rem; color: #2a9d8f;"></i>
+      <h2 style="margin: 16px 0;">Why shop with SJ & CO?</h2>
+      <div class="features-grid">
+        <div class="feature-item"><i class="fas fa-tag"></i> Best prices in KES</div>
+        <div class="feature-item"><i class="fas fa-truck"></i> Fast shipping nationwide</div>
+        <div class="feature-item"><i class="fas fa-headset"></i> 24/7 support via DM</div>
+        <div class="feature-item"><i class="fas fa-gem"></i> Authentic & trendy items</div>
+      </div>
+    </div>
+
+    <div class="live-section">
+      <i class="fab fa-tiktok" style="font-size: 2.5rem; color: #ff0050;"></i>
+      <h3 style="margin: 16px 0;">Join our TikTok LIVE every Friday at 7PM</h3>
+      <p>Exclusive flash sales, giveaways, and live try-ons. Don't miss out!</p>
+      <a href="https://www.tiktok.com/@SJAndCo_KE" target="_blank" class="btn btn-outline" style="margin-top: 24px;"><i class="fab fa-tiktok"></i> Follow for updates</a>
+    </div>
+
+    <div class="faq-section">
+      <h2 class="section-title">Frequently asked questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item"><h4><i class="fas fa-question-circle" style="color:#e76f51;"></i> Do you have a physical store?</h4><p>No, we're 100% online! We sell exclusively through our TikTok channel and website.</p></div>
+        <div class="faq-item"><h4><i class="fas fa-credit-card"></i> What payment methods?</h4><p>We accept M-Pesa payments only. After you DM your order, we'll send the paybill number.</p></div>
+        <div class="faq-item"><h4><i class="fas fa-truck"></i> How long does delivery take?</h4><p>Delivery takes 3-5 business days across Kenya via trusted courier services.</p></div>
+        <div class="faq-item"><h4><i class="fas fa-undo-alt"></i> Can I return or exchange?</h4><p>Yes! DM us within 7 days for defective items or wrong sizes. Exchanges or store credit.</p></div>
+      </div>
+    </div>
+
+    <div style="background: #f4e4d4; border-radius: 48px; padding: 48px 32px; text-align: center; margin: 40px 0;">
+      <i class="fas fa-rocket" style="font-size: 2.5rem; color: #e76f51;"></i>
+      <h3 style="margin: 16px 0;">Ready to shop?</h3>
+      <p>Head to our TikTok now, DM us your favorite product, and we'll get your order started!</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
+        <a href="https://www.tiktok.com/@SJAndCo_KE" target="_blank" class="btn btn-primary"><i class="fab fa-tiktok"></i> DM us on TikTok</a>
+        <a href="products.html" class="btn btn-dark"><i class="fas fa-bag-shopping"></i> Browse products</a>
+      </div>
     </div>
   </div>
 </main>
 
 <footer>
   <div class="container">
-    <p><i class="fas fa-gem"></i> Bazaar & Co. — Your style, delivered.</p>
-    <p style="margin-top: 12px;">📍 TikTok-powered boutique • DM to order • M-Pesa accepted</p>
+    <p><i class="fab fa-tiktok"></i> SJ & CO — DM @SJAndCo_KE for any questions</p>
+    <p style="margin-top: 16px;">📍 M-Pesa payments • Reliable delivery across Kenya • Customer first</p>
   </div>
 </footer>
+
 </body>
 </html>
