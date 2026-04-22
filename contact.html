@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Contact | Bazaar & Co. — Get in Touch</title>
+  <title>Contact | SJ & CO — Get in Touch</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -17,7 +17,6 @@
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: #fefaf5;
       color: #161616;
-      scroll-behavior: smooth;
     }
 
     .container {
@@ -26,11 +25,9 @@
       padding: 0 32px;
     }
 
-    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 12px;
       background: #1e1e2a;
       color: white;
@@ -39,20 +36,15 @@
       text-decoration: none;
       font-weight: 600;
       transition: all 0.25s ease;
-      cursor: pointer;
-      font-size: 0.95rem;
-      border: none;
     }
 
     .btn-primary {
       background: #ff0050;
-      box-shadow: 0 6px 16px rgba(255, 0, 80, 0.25);
     }
 
     .btn-primary:hover {
       background: #e60048;
       transform: translateY(-2px);
-      box-shadow: 0 10px 22px rgba(255, 0, 80, 0.35);
     }
 
     .btn-outline {
@@ -64,19 +56,8 @@
     .btn-outline:hover {
       background: #1e1e2a;
       color: white;
-      transform: translateY(-2px);
     }
 
-    .btn-accent {
-      background: #e76f51;
-    }
-
-    .btn-accent:hover {
-      background: #d55b3c;
-      transform: translateY(-2px);
-    }
-
-    /* Header */
     header {
       background: rgba(255, 255, 245, 0.98);
       position: sticky;
@@ -125,7 +106,6 @@
       color: #e76f51;
     }
 
-    /* Page Header */
     .page-header {
       text-align: center;
       padding: 60px 0 30px;
@@ -138,12 +118,6 @@
       margin-bottom: 16px;
     }
 
-    .page-header p {
-      color: #4a4a5a;
-      font-size: 1.1rem;
-    }
-
-    /* Contact Grid */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -151,7 +125,6 @@
       margin: 40px 0 60px;
     }
 
-    /* Contact Cards */
     .contact-card {
       background: white;
       border-radius: 48px;
@@ -186,12 +159,6 @@
       margin-bottom: 12px;
     }
 
-    .contact-card p {
-      color: #4a4a5a;
-      line-height: 1.5;
-      margin-bottom: 24px;
-    }
-
     .social-link-large {
       display: inline-flex;
       align-items: center;
@@ -203,7 +170,7 @@
       text-decoration: none;
       font-size: 1.1rem;
       font-weight: 600;
-      margin-top: 8px;
+      margin-top: 16px;
       transition: all 0.2s;
     }
 
@@ -211,26 +178,8 @@
       background: #ff0050;
     }
 
-    .social-link-large.tiktok:hover {
-      background: #e60048;
-      transform: scale(1.02);
-    }
-
     .social-link-large.email {
       background: #2c3e66;
-    }
-
-    .social-link-large.email:hover {
-      background: #1e2a45;
-      transform: scale(1.02);
-    }
-
-    .info-row {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin: 20px 0;
-      flex-wrap: wrap;
     }
 
     .info-badge {
@@ -240,27 +189,15 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      font-weight: 500;
-      color: #1e1e2a;
+      margin-top: 20px;
     }
 
-    .info-badge i {
-      color: #e76f51;
-      font-size: 1.1rem;
-    }
-
-    /* Business Hours */
     .hours-card {
       background: #fef3e8;
       border-radius: 32px;
       padding: 28px;
-      margin-top: 32px;
+      margin: 20px 0;
       text-align: center;
-    }
-
-    .hours-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 16px;
     }
 
     .hours-list {
@@ -268,55 +205,14 @@
       justify-content: center;
       gap: 32px;
       flex-wrap: wrap;
-    }
-
-    .hour-item {
-      text-align: center;
-    }
-
-    .hour-item .day {
-      font-weight: 700;
-      color: #e76f51;
-    }
-
-    /* Map Section */
-    .map-section {
-      background: white;
-      border-radius: 48px;
-      padding: 40px;
-      margin: 40px 0;
-      text-align: center;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
-    }
-
-    .map-placeholder {
-      background: linear-gradient(135deg, #e9e0d6, #d9cec2);
-      border-radius: 32px;
-      padding: 60px 20px;
-      margin-top: 24px;
-      color: #8b7a6b;
-    }
-
-    .map-placeholder i {
-      font-size: 3rem;
-      margin-bottom: 16px;
-    }
-
-    /* FAQ Mini */
-    .faq-mini {
-      margin: 40px 0 60px;
-    }
-
-    .faq-mini h2 {
-      text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 32px;
+      margin-top: 16px;
     }
 
     .faq-mini-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
+      margin: 40px 0;
     }
 
     .faq-mini-item {
@@ -326,21 +222,6 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     }
 
-    .faq-mini-item h4 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1rem;
-      margin-bottom: 12px;
-    }
-
-    .faq-mini-item p {
-      color: #4a4a5a;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    /* Footer */
     footer {
       background: #1a1a24;
       color: #ccc;
@@ -351,52 +232,11 @@
       margin-top: 40px;
     }
 
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 32px;
-      margin: 24px 0;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: #ccc;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: #e76f51;
-    }
-
-    /* Responsive */
     @media (max-width: 900px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .container {
-        padding: 0 20px;
-      }
-
-      .navbar {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .page-header h1 {
-        font-size: 2.2rem;
-      }
-
-      .contact-card {
-        padding: 32px 24px;
-      }
-
-      .social-link-large {
-        padding: 12px 24px;
-        font-size: 1rem;
-      }
+      .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+      .container { padding: 0 20px; }
+      .navbar { flex-direction: column; gap: 12px; }
+      .page-header h1 { font-size: 2.2rem; }
     }
   </style>
 </head>
@@ -405,9 +245,7 @@
 <header>
   <div class="container">
     <div class="navbar">
-      <div class="logo">
-        <i class="fas fa-store"></i> BAZAAR & CO.
-      </div>
+      <div class="logo"><i class="fas fa-store"></i> SJ & CO</div>
       <div class="nav-links">
         <a href="index.html"><i class="fas fa-home"></i> Home</a>
         <a href="products.html"><i class="fas fa-grid-2"></i> All Products</a>
@@ -420,113 +258,52 @@
 
 <main>
   <div class="container">
-    <!-- Page Header -->
     <div class="page-header">
       <h1><i class="fas fa-headset"></i> Get in touch</h1>
       <p>We're active on TikTok — fastest replies via DM! Reach out anytime.</p>
     </div>
 
-    <!-- Contact Grid -->
     <div class="contact-grid">
-      <!-- TikTok Card -->
       <div class="contact-card">
-        <div class="contact-icon">
-          <i class="fab fa-tiktok"></i>
-        </div>
+        <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
         <h2>Message us on TikTok</h2>
-        <p><strong>Fastest way to reach us!</strong> Send a DM with your order questions, product inquiries, or support needs. We typically reply within 2-4 hours.</p>
-        <a href="https://www.tiktok.com/@BazaarAndCo_KE" target="_blank" class="social-link-large tiktok">
-          <i class="fab fa-tiktok"></i> @BazaarAndCo_KE
-        </a>
-        <div class="info-row" style="margin-top: 24px;">
-          <div class="info-badge"><i class="fas fa-clock"></i> Reply within 2-4 hours</div>
-          <div class="info-badge"><i class="fas fa-check-circle"></i> DM for orders</div>
-        </div>
+        <p><strong>Fastest way to reach us!</strong> Send a DM with your order questions, product inquiries, or support needs.</p>
+        <a href="https://www.tiktok.com/@SJAndCo_KE" target="_blank" class="social-link-large tiktok"><i class="fab fa-tiktok"></i> @SJAndCo_KE</a>
+        <div class="info-badge"><i class="fas fa-clock"></i> Reply within 2-4 hours</div>
       </div>
 
-      <!-- Email & Other Card -->
       <div class="contact-card">
-        <div class="contact-icon">
-          <i class="fas fa-envelope"></i>
-        </div>
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
         <h2>Email & Business</h2>
-        <p>For business inquiries, partnerships, or wholesale questions, email us directly. For customer support, TikTok DM is recommended for fastest response.</p>
-        <a href="mailto:bazaar.kenya@bazaarco.com" class="social-link-large email">
-          <i class="fas fa-envelope"></i> bazaar.kenya@bazaarco.com
-        </a>
-        <div class="info-row" style="margin-top: 24px;">
-          <div class="info-badge"><i class="fas fa-briefcase"></i> Wholesale inquiries</div>
-          <div class="info-badge"><i class="fas fa-handshake"></i> Partnerships</div>
-        </div>
+        <p>For business inquiries, partnerships, or wholesale questions, email us directly.</p>
+        <a href="mailto:sjco.kenya@sjco.com" class="social-link-large email"><i class="fas fa-envelope"></i> sjco.kenya@sjco.com</a>
+        <div class="info-badge"><i class="fas fa-briefcase"></i> Wholesale & partnerships</div>
       </div>
     </div>
 
-    <!-- Business Hours Card -->
     <div class="hours-card">
       <h3><i class="fas fa-clock"></i> Customer Support Hours</h3>
       <div class="hours-list">
-        <div class="hour-item">
-          <div class="day">Monday - Friday</div>
-          <div>9:00 AM - 8:00 PM (EAT)</div>
-        </div>
-        <div class="hour-item">
-          <div class="day">Saturday</div>
-          <div>10:00 AM - 6:00 PM (EAT)</div>
-        </div>
-        <div class="hour-item">
-          <div class="day">Sunday</div>
-          <div>Closed (DM us anytime!)</div>
-        </div>
+        <div><strong>Monday - Friday</strong><br>9:00 AM - 8:00 PM (EAT)</div>
+        <div><strong>Saturday</strong><br>10:00 AM - 6:00 PM (EAT)</div>
+        <div><strong>Sunday</strong><br>Closed (DM us anytime!)</div>
       </div>
     </div>
 
-    <!-- Location Map Section -->
-    <div class="map-section">
-      <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: #e76f51;"></i>
-      <h2 style="margin: 16px 0;">Our Location</h2>
-      <p style="color: #4a4a5a;">We're an online-first boutique! No physical storefront — but we deliver everywhere in Kenya.</p>
-      <div class="map-placeholder">
-        <i class="fas fa-truck"></i>
-        <p><strong>📍 Shipping nationwide</strong><br>Nairobi • Mombasa • Kisumu • Eldoret • Nakuru • All counties</p>
-        <p style="margin-top: 12px; font-size: 0.85rem;">Delivery within 3-5 business days</p>
-      </div>
+    <div class="faq-mini-grid">
+      <div class="faq-mini-item"><h4><i class="fas fa-question-circle" style="color:#e76f51;"></i> How do I place an order?</h4><p>Screenshot any product, DM it to @SJAndCo_KE with your size and address.</p></div>
+      <div class="faq-mini-item"><h4><i class="fas fa-credit-card"></i> What payment methods?</h4><p>We accept M-Pesa only. We'll send the paybill number after DM order.</p></div>
+      <div class="faq-mini-item"><h4><i class="fas fa-truck"></i> Delivery time?</h4><p>3-5 business days across Kenya. Tracking info provided via DM.</p></div>
+      <div class="faq-mini-item"><h4><i class="fas fa-undo-alt"></i> Returns & exchanges?</h4><p>DM us within 7 days for defective items or wrong sizes.</p></div>
     </div>
 
-    <!-- FAQ Mini Section -->
-    <div class="faq-mini">
-      <h2>Quick answers</h2>
-      <div class="faq-mini-grid">
-        <div class="faq-mini-item">
-          <h4><i class="fas fa-question-circle" style="color: #e76f51;"></i> How do I place an order?</h4>
-          <p>Screenshot any product from our website or TikTok, DM it to @BazaarAndCo_KE with your size and address. We'll reply with M-Pesa payment details.</p>
-        </div>
-        <div class="faq-mini-item">
-          <h4><i class="fas fa-credit-card"></i> What payment methods?</h4>
-          <p>We accept M-Pesa only. After DM order confirmation, we send the paybill number and amount.</p>
-        </div>
-        <div class="faq-mini-item">
-          <h4><i class="fas fa-truck"></i> Delivery time?</h4>
-          <p>3-5 business days across Kenya. Tracking info provided via DM after dispatch.</p>
-        </div>
-        <div class="faq-mini-item">
-          <h4><i class="fas fa-undo-alt"></i> Returns & exchanges?</h4>
-          <p>DM us within 7 days for defective items or wrong sizes. Exchanges or store credit offered.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Final CTA -->
     <div style="background: linear-gradient(115deg, #1e1e2a, #2a2a3a); border-radius: 48px; padding: 48px 32px; text-align: center; margin: 20px 0 60px; color: white;">
       <i class="fab fa-tiktok" style="font-size: 2.5rem; color: #ff0050;"></i>
-      <h3 style="margin: 16px 0; font-size: 1.6rem;">Ready to order?</h3>
-      <p style="margin-bottom: 28px; opacity: 0.9;">The fastest way is to DM us on TikTok. We're waiting for your message!</p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://www.tiktok.com/@BazaarAndCo_KE" target="_blank" class="btn btn-primary">
-          <i class="fab fa-tiktok"></i> DM us on TikTok
-        </a>
-        <a href="products.html" class="btn btn-outline" style="border-color: white; color: white;">
-          <i class="fas fa-bag-shopping"></i> Browse products
-        </a>
+      <h3 style="margin: 16px 0;">Ready to order?</h3>
+      <p>The fastest way is to DM us on TikTok. We're waiting for your message!</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 24px;">
+        <a href="https://www.tiktok.com/@SJAndCo_KE" target="_blank" class="btn btn-primary"><i class="fab fa-tiktok"></i> DM us on TikTok</a>
+        <a href="products.html" class="btn btn-outline" style="border-color: white; color: white;"><i class="fas fa-bag-shopping"></i> Browse products</a>
       </div>
     </div>
   </div>
@@ -534,15 +311,8 @@
 
 <footer>
   <div class="container">
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="products.html">All Products</a>
-      <a href="tiktok-shop.html">TikTok Shop</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <p><i class="fab fa-tiktok"></i> Bazaar & Co. — DM @BazaarAndCo_KE for any questions</p>
-    <p style="margin-top: 16px; font-size: 0.85rem;">📍 M-Pesa payments • Reliable delivery across Kenya • Customer first</p>
-    <p style="margin-top: 24px; font-size: 0.75rem; opacity: 0.7;">© 2025 Bazaar & Co. — Your style, delivered.</p>
+    <p><i class="fab fa-tiktok"></i> SJ & CO — DM @SJAndCo_KE for any questions</p>
+    <p style="margin-top: 16px;">📍 M-Pesa payments • Reliable delivery across Kenya • Customer first</p>
   </div>
 </footer>
 
