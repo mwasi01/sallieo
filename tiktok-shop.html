@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Bazaar & Co. — Get in Touch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #fefaf5; color: #161616; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #1e1e2a;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #1e1e2a;
+      color: #1e1e2a;
+    }
+    .btn-outline:hover {
+      background: #1e1e2a;
+      color: white;
+    }
+    header {
+      background: rgba(255,255,245,0.98);
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      border-bottom: 1px solid #f0e3d8;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 800;
+      background: linear-gradient(125deg, #1e1e2a, #e76f51);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #2c2c3a;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color: #e76f51; }
+    .contact-hero {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+    .contact-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .contact-card {
+      background: white;
+      border-radius: 56px;
+      padding: 48px;
+      box-shadow: 0 25px 45px -12px rgba(0,0,0,0.1);
+      margin: 20px 0 60px;
+      text-align: center;
+    }
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: #101010;
+      color: white;
+      padding: 16px 36px;
+      border-radius: 80px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 16px 8px;
+      transition: 0.2s;
+    }
+    .social-link.tiktok { background: #ff0050; }
+    .social-link.tiktok:hover { background: #e60048; transform: scale(1.02); }
+    .social-link.email { background: #2c3e66; }
+    .info-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 28px 0;
+      flex-wrap: wrap;
+    }
+    .info-badge {
+      background: #fef3e8;
+      padding: 14px 28px;
+      border-radius: 80px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+    }
+    footer {
+      background: #1a1a24;
+      color: #ccc;
+      padding: 48px 0 32px;
+      text-align: center;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+    @media (max-width: 780px) {
+      .contact-card { padding: 32px 24px; }
+      .contact-hero h1 { font-size: 2rem; }
+      .navbar { flex-direction: column; gap: 12px; }
+      .social-link { padding: 12px 24px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo"><i class="fas fa-store"></i> BAZAAR & CO.</div>
+      <div class="nav-links">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="products.html"><i class="fas fa-grid-2"></i> All Products</a>
+        <a href="tiktok-shop.html"><i class="fab fa-tiktok"></i> TikTok Shop</a>
+        <a href="contact.html"><i class="fas fa-headset"></i> Contact</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="contact-hero">
+      <h1><i class="fas fa-headset"></i> Let's talk</h1>
+      <p style="margin-top: 16px; color: #4a4a5a;">We reply fastest on TikTok DM — reach out anytime!</p>
+    </div>
+
+    <div class="contact-card">
+      <i class="fab fa-tiktok" style="font-size: 3rem; color: #ff0050;"></i>
+      <h2 style="margin: 16px 0;">Chat with us on TikTok</h2>
+      <a href="https://www.tiktok.com/@BazaarAndCo_KE" target="_blank" class="social-link tiktok">
+        <i class="fab fa-tiktok"></i> @BazaarAndCo_KE
+      </a>
+      <p style="margin: 20px 0;"><strong>📲 DM for orders, sizing help, and delivery updates</strong><br>We typically respond within 2-4 hours.</p>
+      
+      <div class="info-row">
+        <div class="info-badge"><i class="fas fa-envelope"></i> bazaar.kenya@bazaarco.com</div>
+        <div class="info-badge"><i class="fas fa-phone-alt"></i> WhatsApp (soon) +254 700 000 000</div>
+      </div>
+      
+      <hr style="margin: 32px 0; border-color: #eee;">
+      
+      <h3><i class="fas fa-store"></i> Business inquiries</h3>
+      <p style="margin: 12px 0;">For wholesale, partnerships, or bulk orders:<br>
+      <strong>📧 partners@bazaarco.com</strong> (husband can edit this email)</p>
+      
+      <div style="margin-top: 36px;">
+        <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <a href="products.html" class="btn" style="margin-left: 12px; background: #e76f51;"><i class="fas fa-bag-shopping"></i> Start Shopping</a>
+      </div>
+    </div>
+
+    <div style="background: #f4e4d4; border-radius: 48px; padding: 32px; text-align: center; margin-bottom: 60px;">
+      <i class="fas fa-clock" style="font-size: 2rem; color: #e76f51;"></i>
+      <h3 style="margin: 12px 0;">Customer Support Hours</h3>
+      <p>Monday - Saturday: 9AM - 8PM (EAT)<br>Sunday: Closed for restocking — but DM us anytime!</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p><i class="fas fa-gem"></i> Bazaar & Co. — Your style, delivered.</p>
+    <p style="margin-top: 12px;">📍 TikTok-powered boutique • DM to order • M-Pesa accepted</p>
+  </div>
+</footer>
+</body>
+</html>
