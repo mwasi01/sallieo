@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>All Products | SJ & CO — Home • Style • Footwear</title>
+  <title>All Products | SJ & CO — Home • Style • Footwear • Watches</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -374,7 +374,7 @@
 <div class="page-header">
   <div class="container">
     <h1><i class="fas fa-store"></i> Complete Collection</h1>
-    <p>Home gadgets • Trendy clothes • Premium footwear — all prices in KES</p>
+    <p>Home gadgets • Trendy clothes • Premium footwear • Stylish watches — all prices in KES</p>
   </div>
 </div>
 
@@ -384,6 +384,7 @@
     <button class="filter-btn" data-filter="home gadget"><i class="fas fa-microchip"></i> Home Gadgets</button>
     <button class="filter-btn" data-filter="clothes"><i class="fas fa-tshirt"></i> Clothes</button>
     <button class="filter-btn" data-filter="shoes"><i class="fas fa-shoe-prints"></i> Footwear</button>
+    <button class="filter-btn" data-filter="watches"><i class="fas fa-clock"></i> Watches</button>
   </div>
 
   <div id="fullProductGrid" class="product-grid"></div>
@@ -415,20 +416,35 @@
 </div>
 
 <script>
-  // ======================== PRODUCT CATALOG ========================
+  // ======================== PRODUCT CATALOG WITH WATCHES ========================
   const productsCatalog = [
+    // Home Gadgets
     { id: 1, name: "Smart RGB LED Strip", category: "home gadget", priceKes: 3200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🌈+LED+Strip", desc: "Music sync, 5m, app-controlled. Perfect for gaming or cozy nights. Easy installation with adhesive backing." },
     { id: 2, name: "Mini Aroma Humidifier", category: "home gadget", priceKes: 4500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=💨+Humidifier", desc: "300ml, silent mist, 7 color LEDs, auto shut-off. Great for bedrooms and offices." },
-    { id: 3, name: "Oversized Knit Sweater", category: "clothes", priceKes: 3800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧶+Knit+Sweater", desc: "Beige/cream, one size fits most, cloud-soft fabric, viral TikTok style. Perfect for chilly evenings." },
-    { id: 4, name: "High-Waist Cargo Pants", category: "clothes", priceKes: 4200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👖+Cargo+Pants", desc: "Khaki & black available, relaxed fit, multiple pockets, streetwear essential. Sizes XS-XXL." },
-    { id: 5, name: "Chunky Platform Sneakers", category: "shoes", priceKes: 5900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👟+Chunky+Sneakers", desc: "Unisex design, breathable mesh, 4cm boost sole, white/cream color. Sizes 36-44 available." },
-    { id: 6, name: "Leather Loafers (Slip-on)", category: "shoes", priceKes: 5400, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👞+Leather+Loafers", desc: "Classic design, memory foam insole, everyday elegance & comfort. Sizes 38-45." },
     { id: 7, name: "USB Mug Warmer", category: "home gadget", priceKes: 2200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=☕+Mug+Warmer", desc: "Keep coffee/tea warm at perfect temperature, 3 heat settings, auto shut-off after 4 hours." },
-    { id: 8, name: "Oversized Graphic Hoodie", category: "clothes", priceKes: 4900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🦄+Graphic+Hoodie", desc: "Streetwear vibe, fleece lining, 'SJ & CO' print on back. Available in black, gray, and cream." },
-    { id: 9, name: "Mesh Running Sneakers", category: "shoes", priceKes: 5200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🏃+Running+Shoes", desc: "Ultra-lightweight, non-slip sole, breathable mesh upper. Perfect for daily runs or casual wear." },
     { id: 10, name: "Cordless Vacuum Cleaner", category: "home gadget", priceKes: 8900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧹+Vacuum", desc: "Powerful suction, lightweight design, washable filter, cordless convenience. 30min runtime." },
     { id: 11, name: "Silk Satin Pillowcase Set", category: "home gadget", priceKes: 3500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🛏️+Silk+Pillowcase", desc: "Set of 2, anti-aging and anti-bedhead, cooling fabric, machine washable." },
-    { id: 12, name: "Denim Jacket (Oversized)", category: "clothes", priceKes: 5500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👕+Denim+Jacket", desc: "Classic light wash, oversized fit, button closure, perfect layering piece for any outfit." }
+    
+    // Clothes
+    { id: 3, name: "Oversized Knit Sweater", category: "clothes", priceKes: 3800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧶+Knit+Sweater", desc: "Beige/cream, one size fits most, cloud-soft fabric, viral TikTok style. Perfect for chilly evenings." },
+    { id: 4, name: "High-Waist Cargo Pants", category: "clothes", priceKes: 4200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👖+Cargo+Pants", desc: "Khaki & black available, relaxed fit, multiple pockets, streetwear essential. Sizes XS-XXL." },
+    { id: 8, name: "Oversized Graphic Hoodie", category: "clothes", priceKes: 4900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🦄+Graphic+Hoodie", desc: "Streetwear vibe, fleece lining, 'SJ & CO' print on back. Available in black, gray, and cream." },
+    { id: 12, name: "Denim Jacket (Oversized)", category: "clothes", priceKes: 5500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👕+Denim+Jacket", desc: "Classic light wash, oversized fit, button closure, perfect layering piece for any outfit." },
+    
+    // Shoes
+    { id: 5, name: "Chunky Platform Sneakers", category: "shoes", priceKes: 5900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👟+Chunky+Sneakers", desc: "Unisex design, breathable mesh, 4cm boost sole, white/cream color. Sizes 36-44 available." },
+    { id: 6, name: "Leather Loafers (Slip-on)", category: "shoes", priceKes: 5400, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👞+Leather+Loafers", desc: "Classic design, memory foam insole, everyday elegance & comfort. Sizes 38-45." },
+    { id: 9, name: "Mesh Running Sneakers", category: "shoes", priceKes: 5200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🏃+Running+Shoes", desc: "Ultra-lightweight, non-slip sole, breathable mesh upper. Perfect for daily runs or casual wear." },
+    
+    // === NEW: WATCHES ===
+    { id: 13, name: "Minimalist Classic Watch", category: "watches", priceKes: 4500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Classic+Watch", desc: "Elegant minimalist design, stainless steel mesh strap, Japanese quartz movement. Perfect for daily wear. Water resistant." },
+    { id: 14, name: "Chronograph Sport Watch", category: "watches", priceKes: 6800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Sport+Watch", desc: "Multi-function chronograph, stopwatch feature, date display, durable mineral glass. Great for active lifestyles." },
+    { id: 15, name: "Rose Gold Mesh Watch", category: "watches", priceKes: 5900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Rose+Gold", desc: "Stunning rose gold finish, interchangeable mesh strap, slim profile. Elegant accessory for any outfit." },
+    { id: 16, name: "Digital Smart Watch", category: "watches", priceKes: 8500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Smart+Watch", desc: "Fitness tracker, heart rate monitor, sleep tracking, notifications, 7-day battery life. Compatible with iOS & Android." },
+    { id: 17, name: "Wooden Natural Watch", category: "watches", priceKes: 7200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Wooden+Watch", desc: "Eco-friendly sandalwood construction, unique natural grain, hypoallergenic. Each watch has unique patterns. Battery powered." },
+    { id: 18, name: "Luxury Gold Chronograph", category: "watches", priceKes: 12500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Luxury+Gold", desc: "Premium gold-tone finish, chronograph sub-dials, date window, genuine leather strap. Sophisticated statement piece." },
+    { id: 19, name: "Silicone Sports Watch", category: "watches", priceKes: 3800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Silicone+Sport", desc: "Lightweight silicone band, water resistant to 50m, luminous hands, ideal for swimming and outdoor activities." },
+    { id: 20, name: "Automatic Skeleton Watch", category: "watches", priceKes: 15800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Skeleton+Watch", desc: "Automatic self-winding movement, transparent dial showcasing inner mechanics, stainless steel case. No battery needed." }
   ];
 
   // Format KES currency
@@ -441,6 +457,7 @@
     if (cat === 'home gadget') return '<i class="fas fa-microchip"></i> Home Gadget';
     if (cat === 'clothes') return '<i class="fas fa-tshirt"></i> Fashion';
     if (cat === 'shoes') return '<i class="fas fa-shoe-prints"></i> Footwear';
+    if (cat === 'watches') return '<i class="fas fa-clock"></i> Watches';
     return cat;
   }
 
@@ -553,7 +570,7 @@
   // Initialize
   renderProducts();
 
-  console.log('✅ SJ & CO Products Page Ready | Edit products in the "productsCatalog" array');
+  console.log('✅ SJ & CO Products Page Ready | 20 products including 8 stylish watches');
 </script>
 </body>
 </html>
