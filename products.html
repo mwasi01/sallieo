@@ -374,7 +374,7 @@
 <div class="page-header">
   <div class="container">
     <h1><i class="fas fa-store"></i> Complete Collection</h1>
-    <p>Home gadgets • Trendy clothes • Premium footwear • Stylish watches — all prices in KES</p>
+    <p>Home gadgets • Trendy clothes • Premium footwear • Designer watches — all prices in KES</p>
   </div>
 </div>
 
@@ -416,39 +416,64 @@
 </div>
 
 <script>
-  // ======================== PRODUCT CATALOG WITH WATCHES ========================
+  // ======================== COMPLETE PRODUCT CATALOG WITH ALL WATCHES ========================
   const productsCatalog = [
-    // Home Gadgets
+    // ========== HOME GADGETS (Existing) ==========
     { id: 1, name: "Smart RGB LED Strip", category: "home gadget", priceKes: 3200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🌈+LED+Strip", desc: "Music sync, 5m, app-controlled. Perfect for gaming or cozy nights. Easy installation with adhesive backing." },
     { id: 2, name: "Mini Aroma Humidifier", category: "home gadget", priceKes: 4500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=💨+Humidifier", desc: "300ml, silent mist, 7 color LEDs, auto shut-off. Great for bedrooms and offices." },
-    { id: 7, name: "USB Mug Warmer", category: "home gadget", priceKes: 2200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=☕+Mug+Warmer", desc: "Keep coffee/tea warm at perfect temperature, 3 heat settings, auto shut-off after 4 hours." },
-    { id: 10, name: "Cordless Vacuum Cleaner", category: "home gadget", priceKes: 8900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧹+Vacuum", desc: "Powerful suction, lightweight design, washable filter, cordless convenience. 30min runtime." },
-    { id: 11, name: "Silk Satin Pillowcase Set", category: "home gadget", priceKes: 3500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🛏️+Silk+Pillowcase", desc: "Set of 2, anti-aging and anti-bedhead, cooling fabric, machine washable." },
+    { id: 3, name: "USB Mug Warmer", category: "home gadget", priceKes: 2200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=☕+Mug+Warmer", desc: "Keep coffee/tea warm at perfect temperature, 3 heat settings, auto shut-off after 4 hours." },
+    { id: 4, name: "Cordless Vacuum Cleaner", category: "home gadget", priceKes: 8900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧹+Vacuum", desc: "Powerful suction, lightweight design, washable filter, cordless convenience. 30min runtime." },
+    { id: 5, name: "Silk Satin Pillowcase Set", category: "home gadget", priceKes: 3500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🛏️+Silk+Pillowcase", desc: "Set of 2, anti-aging and anti-bedhead, cooling fabric, machine washable." },
     
-    // Clothes
-    { id: 3, name: "Oversized Knit Sweater", category: "clothes", priceKes: 3800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧶+Knit+Sweater", desc: "Beige/cream, one size fits most, cloud-soft fabric, viral TikTok style. Perfect for chilly evenings." },
-    { id: 4, name: "High-Waist Cargo Pants", category: "clothes", priceKes: 4200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👖+Cargo+Pants", desc: "Khaki & black available, relaxed fit, multiple pockets, streetwear essential. Sizes XS-XXL." },
+    // ========== CLOTHES (Existing) ==========
+    { id: 6, name: "Oversized Knit Sweater", category: "clothes", priceKes: 3800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧶+Knit+Sweater", desc: "Beige/cream, one size fits most, cloud-soft fabric, viral TikTok style. Perfect for chilly evenings." },
+    { id: 7, name: "High-Waist Cargo Pants", category: "clothes", priceKes: 4200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👖+Cargo+Pants", desc: "Khaki & black available, relaxed fit, multiple pockets, streetwear essential. Sizes XS-XXL." },
     { id: 8, name: "Oversized Graphic Hoodie", category: "clothes", priceKes: 4900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🦄+Graphic+Hoodie", desc: "Streetwear vibe, fleece lining, 'SJ & CO' print on back. Available in black, gray, and cream." },
-    { id: 12, name: "Denim Jacket (Oversized)", category: "clothes", priceKes: 5500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👕+Denim+Jacket", desc: "Classic light wash, oversized fit, button closure, perfect layering piece for any outfit." },
+    { id: 9, name: "Denim Jacket (Oversized)", category: "clothes", priceKes: 5500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👕+Denim+Jacket", desc: "Classic light wash, oversized fit, button closure, perfect layering piece for any outfit." },
     
-    // Shoes
-    { id: 5, name: "Chunky Platform Sneakers", category: "shoes", priceKes: 5900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👟+Chunky+Sneakers", desc: "Unisex design, breathable mesh, 4cm boost sole, white/cream color. Sizes 36-44 available." },
-    { id: 6, name: "Leather Loafers (Slip-on)", category: "shoes", priceKes: 5400, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👞+Leather+Loafers", desc: "Classic design, memory foam insole, everyday elegance & comfort. Sizes 38-45." },
-    { id: 9, name: "Mesh Running Sneakers", category: "shoes", priceKes: 5200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🏃+Running+Shoes", desc: "Ultra-lightweight, non-slip sole, breathable mesh upper. Perfect for daily runs or casual wear." },
+    // ========== SHOES (Existing) ==========
+    { id: 10, name: "Chunky Platform Sneakers", category: "shoes", priceKes: 5900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👟+Chunky+Sneakers", desc: "Unisex design, breathable mesh, 4cm boost sole, white/cream color. Sizes 36-44 available." },
+    { id: 11, name: "Leather Loafers (Slip-on)", category: "shoes", priceKes: 5400, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👞+Leather+Loafers", desc: "Classic design, memory foam insole, everyday elegance & comfort. Sizes 38-45." },
+    { id: 12, name: "Mesh Running Sneakers", category: "shoes", priceKes: 5200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🏃+Running+Shoes", desc: "Ultra-lightweight, non-slip sole, breathable mesh upper. Perfect for daily runs or casual wear." },
     
-    // === NEW: WATCHES ===
-    { id: 13, name: "Minimalist Classic Watch", category: "watches", priceKes: 4500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Classic+Watch", desc: "Elegant minimalist design, stainless steel mesh strap, Japanese quartz movement. Perfect for daily wear. Water resistant." },
-    { id: 14, name: "Chronograph Sport Watch", category: "watches", priceKes: 6800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Sport+Watch", desc: "Multi-function chronograph, stopwatch feature, date display, durable mineral glass. Great for active lifestyles." },
-    { id: 15, name: "Rose Gold Mesh Watch", category: "watches", priceKes: 5900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Rose+Gold", desc: "Stunning rose gold finish, interchangeable mesh strap, slim profile. Elegant accessory for any outfit." },
-    { id: 16, name: "Digital Smart Watch", category: "watches", priceKes: 8500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Smart+Watch", desc: "Fitness tracker, heart rate monitor, sleep tracking, notifications, 7-day battery life. Compatible with iOS & Android." },
-    { id: 17, name: "Wooden Natural Watch", category: "watches", priceKes: 7200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Wooden+Watch", desc: "Eco-friendly sandalwood construction, unique natural grain, hypoallergenic. Each watch has unique patterns. Battery powered." },
-    { id: 18, name: "Luxury Gold Chronograph", category: "watches", priceKes: 12500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Luxury+Gold", desc: "Premium gold-tone finish, chronograph sub-dials, date window, genuine leather strap. Sophisticated statement piece." },
-    { id: 19, name: "Silicone Sports Watch", category: "watches", priceKes: 3800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Silicone+Sport", desc: "Lightweight silicone band, water resistant to 50m, luminous hands, ideal for swimming and outdoor activities." },
-    { id: 20, name: "Automatic Skeleton Watch", category: "watches", priceKes: 15800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Skeleton+Watch", desc: "Automatic self-winding movement, transparent dial showcasing inner mechanics, stainless steel case. No battery needed." }
+    // ========== WATCHES (From Your Images - All Added) ==========
+    // Row 1 from first image
+    { id: 13, name: "Couple Watches Casual Style", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Couple+Watches", desc: "Elegant couple watch set, perfect matching accessories for him and her. Great gift idea for anniversaries." },
+    { id: 14, name: "Design Watches Luminous", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Luminous+Watch", desc: "Glow-in-the-dark dial, stylish design, perfect for night events. Water resistant and durable." },
+    { id: 15, name: "Fashion Three Eyes Couple Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Three+Eyes+Watch", desc: "Chronograph movement with three sub-dials. Sporty yet elegant design for daily wear." },
+    { id: 16, name: "5pcs Set Luxury Women Watch Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+5pcs+Watch+Set", desc: "Complete set of 5 luxury women's watches. Multiple styles for any outfit. Great value set." },
+    { id: 17, name: "BINBOND Men's Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+BINBOND+Watch", desc: "Premium men's watch from BINBOND. Durable construction with classic design elements." },
+    { id: 18, name: "LED Digital Luminescent Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+LED+Digital+Watch", desc: "Modern LED digital display, luminescent feature, perfect for sports and outdoor activities." },
+    
+    // Sports watches from first image
+    { id: 19, name: "Sports Edition Chronograph Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Sports+Watch", desc: "Professional sports chronograph, stopwatch function, durable rubber strap, water resistant." },
+    
+    // N/MIFORCE watches from second image
+    { id: 20, name: "Naviforce Men's Dual Time Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Naviforce+Dual+Time", desc: "Dual time zone display, calendar display, alarm function. Premium Naviforce quality craftsmanship." },
+    { id: 21, name: "Naviforce Men's Digital Analogue", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Naviforce+Digital", desc: "Digital and analogue combination, 30M water resistant. Modern meets classic design." },
+    { id: 22, name: "High Quality 5IN1 Ladies Gift Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+5IN1+Gift+Set", desc: "Complete gift set including watch, bracelet, necklace, earrings. Perfect present for her." },
+    { id: 23, name: "Finger Ring Watch for Women", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Ring+Watch", desc: "Unique finger ring watch design. Trendy accessory that also tells time. Adjustable fit." },
+    { id: 24, name: "Men's Adjustable Elastic Quartz Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Elastic+Quartz", desc: "Comfortable elastic band, precise quartz movement, one size fits most wrists." },
+    
+    // Watch sets from third image
+    { id: 25, name: "5-piece Men's Watch And Bracelet Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Men+Set+5pc", desc: "Complete set with watch and matching bracelet. Fashion-forward design." },
+    { id: 26, name: "Analog Wrist Watch for Men Silver", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Silver+Watch", desc: "Stainless steel silver band, classic analog display, black dial. Elegant business style." },
+    { id: 27, name: "4-piece Men's Watch And Bracelet Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Men+Set+4pc", desc: "Coordinated watch and bracelet set. Great for daily wear and special occasions." },
+    { id: 28, name: "2Piece Versatile Business Men Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Business+Set", desc: "Two-piece business watch set. Professional look perfect for office and formal events." },
+    { id: 29, name: "Watch Series Paired With PU Leather Strap Sport Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+PU+Leather+Sport", desc: "Durable PU leather strap, sports design, comfortable for all-day wear." },
+    
+    // Featured watches from fourth image
+    { id: 30, name: "EAGEAET Men Versatile Business Belt Quartz Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+EAGEAET+Business", desc: "Premium EAGEAET brand, versatile business style, leather belt strap, precise quartz movement." },
+    { id: 31, name: "Men's Quartz Watch Bracelets Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Quartz+Bracelet+Set", desc: "Complete watch and bracelet set. Stylish combination for the modern man." },
+    { id: 32, name: "Ultra Thin Stainless Steel Mesh Belt Quartz Business Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Ultra+Thin+Watch", desc: "Ultra-thin profile, stainless steel mesh band, minimalistic business design." },
+    { id: 33, name: "2026 New Automatic Movement Men's Watch Calendar Waterproof", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Automatic+2026", desc: "Latest 2026 model, automatic self-winding movement, calendar display, waterproof design." }
   ];
 
-  // Format KES currency
+  // Format KES currency - shows 0 as "Price on Request"
   function formatKes(amount) {
+    if (amount === 0 || amount === null) {
+      return 'Price on DM';
+    }
     return 'KES ' + amount.toLocaleString('en-KE');
   }
 
@@ -570,7 +595,8 @@
   // Initialize
   renderProducts();
 
-  console.log('✅ SJ & CO Products Page Ready | 20 products including 8 stylish watches');
+  console.log('✅ SJ & CO Products Page Ready | Total ' + productsCatalog.length + ' products including 21+ watches');
+  console.log('⚠️ Watch prices are set to 0 (shows as "Price on DM") — update prices in productsCatalog array');
 </script>
 </body>
 </html>
