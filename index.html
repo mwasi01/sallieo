@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>SJ & CO | Home • Style • Footwear</title>
+  <title>SJ & CO | Home • Style • Footwear • Watches • Bags</title>
   <!-- Google Fonts + Font Awesome Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -90,10 +90,52 @@
       border-radius: 8px;
     }
 
+    /* Category Showcase */
+    .category-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+      margin: 40px 0 60px;
+    }
+    .category-item {
+      background: white;
+      border-radius: 28px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 1px solid rgba(0,0,0,0.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    .category-item:hover {
+      transform: translateY(-5px);
+      background: #e76f51;
+      color: white;
+    }
+    .category-item:hover i,
+    .category-item:hover h3,
+    .category-item:hover p {
+      color: white;
+    }
+    .category-item i {
+      font-size: 2.5rem;
+      color: #e76f51;
+      margin-bottom: 12px;
+    }
+    .category-item h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .category-item p {
+      font-size: 0.75rem;
+      color: #4a4a5a;
+    }
+
     /* product grid premium */
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 36px;
     }
 
@@ -366,12 +408,34 @@
       margin-top: 16px;
     }
 
+    /* Category Tags */
+    .category-tags {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .category-tag {
+      background: rgba(255,255,255,0.9);
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     @media (max-width: 780px) {
       .container { padding: 0 20px; }
       .hero-text h1 { font-size: 2.2rem; }
       .section-title { font-size: 1.9rem; }
       .navbar { flex-direction: column; gap: 12px; }
       .tiktok-premium { padding: 32px 24px; text-align: center; flex-direction: column; }
+      .category-showcase { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .category-item { padding: 16px 12px; }
+      .category-item i { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -396,14 +460,60 @@
     <div class="container hero-grid">
       <div class="hero-text">
         <h1>Where style meets <span style="color:#e76f51;">home & soul</span><br>✨ Shop without limits ✨</h1>
-        <p><i class="fas fa-map-marker-alt" style="color:#e76f51;"></i> 100% TikTok-powered boutique — DM to order. Premium home gadgets, trending clothes & footwear. <strong>All prices in KES</strong> with M-Pesa checkout.</p>
+        <p><i class="fas fa-map-marker-alt" style="color:#e76f51;"></i> 100% TikTok-powered boutique — DM to order. Premium home gadgets, trending clothes, footwear, designer watches, tote & hand bags. <strong>All prices in KES</strong> with M-Pesa checkout.</p>
         <div style="display: flex; gap: 16px; flex-wrap: wrap;">
           <a href="products.html" class="btn btn-primary"><i class="fas fa-bag-shopping"></i> Explore collection</a>
           <a href="https://www.tiktok.com/@SJAndCo_KE" target="_blank" class="btn btn-outline"><i class="fab fa-tiktok"></i> Follow @SJAndCo_KE</a>
         </div>
+        <div class="category-tags">
+          <span class="category-tag"><i class="fas fa-microchip"></i> Gadgets</span>
+          <span class="category-tag"><i class="fas fa-tshirt"></i> Fashion</span>
+          <span class="category-tag"><i class="fas fa-shoe-prints"></i> Footwear</span>
+          <span class="category-tag"><i class="fas fa-clock"></i> Watches</span>
+          <span class="category-tag"><i class="fas fa-shopping-bag"></i> Tote Bags</span>
+          <span class="category-tag"><i class="fas fa-handbag"></i> Hand Bags</span>
+        </div>
       </div>
       <div class="hero-emoji-stack">
-        <i class="fas fa-couch" style="margin:0 6px;"></i> <i class="fas fa-tshirt"></i> <i class="fas fa-shoe-prints"></i> <i class="fas fa-mobile-alt"></i>
+        <i class="fas fa-couch" style="margin:0 6px;"></i> <i class="fas fa-tshirt"></i> <i class="fas fa-shoe-prints"></i> <i class="fas fa-clock"></i> <i class="fas fa-shopping-bag"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Showcase -->
+  <section style="padding: 0 0 40px;">
+    <div class="container">
+      <div class="category-showcase">
+        <div class="category-item" onclick="location.href='products.html'">
+          <i class="fas fa-microchip"></i>
+          <h3>Home Gadgets</h3>
+          <p>Smart devices & more</p>
+        </div>
+        <div class="category-item" onclick="location.href='products.html'">
+          <i class="fas fa-tshirt"></i>
+          <h3>Clothes</h3>
+          <p>Trendy fashion</p>
+        </div>
+        <div class="category-item" onclick="location.href='products.html'">
+          <i class="fas fa-shoe-prints"></i>
+          <h3>Footwear</h3>
+          <p>Sneakers & loafers</p>
+        </div>
+        <div class="category-item" onclick="location.href='products.html'">
+          <i class="fas fa-clock"></i>
+          <h3>Watches</h3>
+          <p>Designer timepieces</p>
+        </div>
+        <div class="category-item" onclick="location.href='products.html'">
+          <i class="fas fa-shopping-bag"></i>
+          <h3>Tote Bags</h3>
+          <p>Everyday essentials</p>
+        </div>
+        <div class="category-item" onclick="location.href='products.html'">
+          <i class="fas fa-handbag"></i>
+          <h3>Hand Bags</h3>
+          <p>Ladies' favorites</p>
+        </div>
       </div>
     </div>
   </section>
@@ -416,7 +526,7 @@
         <!-- dynamic featured cards loaded from JS -->
       </div>
       <div style="text-align: center; margin-top: 48px;">
-        <a href="products.html" class="btn btn-outline"><i class="fas fa-arrow-right"></i> View full catalog</a>
+        <a href="products.html" class="btn btn-outline"><i class="fas fa-arrow-right"></i> View full catalog (50+ products)</a>
       </div>
     </div>
   </section>
@@ -442,7 +552,7 @@
 <footer>
   <div class="container">
     <p><i class="fas fa-gem"></i> SJ & CO — curated essentials, delivered with love <i class="fas fa-heart" style="color:#e76f51;"></i></p>
-    <p style="margin-top: 20px; font-size:0.85rem;">📍 Fully managed via TikTok & DM orders • Easy M-Pesa • Your hub for home, style & sneakers</p>
+    <p style="margin-top: 20px; font-size:0.85rem;">📍 Fully managed via TikTok & DM orders • Easy M-Pesa • Home • Fashion • Footwear • Watches • Bags</p>
     <div style="margin: 24px 0 0; display: flex; justify-content: center; gap: 28px;">
       <a href="#" style="color:#ccc; text-decoration:none;"><i class="fab fa-tiktok"></i> TikTok</a>
       <a href="#" style="color:#ccc; text-decoration:none;"><i class="fab fa-instagram"></i> Instagram</a>
@@ -468,21 +578,53 @@
 </div>
 
 <script>
-  // ======================== PRODUCT CATALOG (ALL IN KES) ========================
+  // ======================== COMPLETE PRODUCT CATALOG (All Categories) ========================
   const productsCatalog = [
-    { id: 1, name: "Smart RGB LED Strip", category: "home gadget", priceKes: 3200, imagePlaceholder: "https://placehold.co/600x600/e9d6c5/a67c52?text=🌈+LED+Strip", desc: "Music sync, 5m, app-controlled. Perfect for gaming or cozy nights.", icon: "fa-lightbulb" },
-    { id: 2, name: "Mini Aroma Humidifier", category: "home gadget", priceKes: 4500, imagePlaceholder: "https://placehold.co/600x600/e9d6c5/a67c52?text=💨+Humidifier", desc: "300ml, silent mist, 7 color LEDs, auto shut-off.", icon: "fa-wind" },
-    { id: 3, name: "Oversized Knit Sweater", category: "clothes", priceKes: 3800, imagePlaceholder: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧶+Knit+Sweater", desc: "Beige/cream, one size, cloud-soft fabric, viral TikTok style.", icon: "fa-shirt" },
-    { id: 4, name: "High-Waist Cargo Pants", category: "clothes", priceKes: 4200, imagePlaceholder: "https://placehold.co/600x600/e9d6c5/a67c52?text=👖+Cargo+Pants", desc: "Khaki & black, relaxed fit, multiple pockets, streetwear essential.", icon: "fa-vest" },
-    { id: 5, name: "Chunky Platform Sneakers", category: "shoes", priceKes: 5900, imagePlaceholder: "https://placehold.co/600x600/e9d6c5/a67c52?text=👟+Chunky+Sneakers", desc: "Unisex, breathable, 4cm boost sole, white/cream, size 36-44.", icon: "fa-shoe-prints" },
-    { id: 6, name: "Leather Loafers (Slip-on)", category: "shoes", priceKes: 5400, imagePlaceholder: "https://placehold.co/600x600/e9d6c5/a67c52?text=👞+Leather+Loafers", desc: "Classic design, memory foam, everyday elegance & comfort.", icon: "fa-shoe-prints" },
-    { id: 7, name: "USB Mug Warmer", category: "home gadget", priceKes: 2200, imagePlaceholder: "https://placehold.co/600x600/e9d6c5/a67c52?text=☕+Mug+Warmer", desc: "Keep coffee/tea warm, 3 temp settings, auto-off.", icon: "fa-mug-hot" },
-    { id: 8, name: "Oversized Graphic Hoodie", category: "clothes", priceKes: 4900, imagePlaceholder: "https://placehold.co/600x600/e9d6c5/a67c52?text=🦄+Graphic+Hoodie", desc: "Streetwear vibe, fleece lining, 'SJ & CO' print.", icon: "fa-hoodie" },
-    { id: 9, name: "Mesh Running Sneakers", category: "shoes", priceKes: 5200, imagePlaceholder: "https://placehold.co/600x600/e9d6c5/a67c52?text=🏃+Running+Shoes", desc: "Ultra-lightweight, non-slip, breathable mesh.", icon: "fa-running" },
-    { id: 10, name: "Cordless Vacuum Cleaner", category: "home gadget", priceKes: 8900, imagePlaceholder: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧹+Vacuum", desc: "Powerful suction, lightweight, washable filter, cordless.", icon: "fa-broom" }
+    // Home Gadgets
+    { id: 1, name: "Smart RGB LED Strip", category: "home gadget", priceKes: 3200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🌈+LED+Strip", desc: "Music sync, 5m, app-controlled. Perfect for gaming or cozy nights." },
+    { id: 2, name: "Mini Aroma Humidifier", category: "home gadget", priceKes: 4500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=💨+Humidifier", desc: "300ml, silent mist, 7 color LEDs, auto shut-off." },
+    { id: 3, name: "USB Mug Warmer", category: "home gadget", priceKes: 2200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=☕+Mug+Warmer", desc: "Keep coffee/tea warm, 3 heat settings, auto shut-off." },
+    { id: 4, name: "Cordless Vacuum Cleaner", category: "home gadget", priceKes: 8900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧹+Vacuum", desc: "Powerful suction, lightweight, washable filter." },
+    { id: 5, name: "Silk Satin Pillowcase Set", category: "home gadget", priceKes: 3500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🛏️+Silk+Pillowcase", desc: "Set of 2, anti-aging, cooling fabric." },
+    
+    // Clothes
+    { id: 6, name: "Oversized Knit Sweater", category: "clothes", priceKes: 3800, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🧶+Knit+Sweater", desc: "Beige/cream, cloud-soft fabric, viral TikTok style." },
+    { id: 7, name: "High-Waist Cargo Pants", category: "clothes", priceKes: 4200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👖+Cargo+Pants", desc: "Khaki & black, relaxed fit, multiple pockets." },
+    { id: 8, name: "Oversized Graphic Hoodie", category: "clothes", priceKes: 4900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🦄+Graphic+Hoodie", desc: "Streetwear vibe, fleece lining, 'SJ & CO' print." },
+    { id: 9, name: "Denim Jacket (Oversized)", category: "clothes", priceKes: 5500, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👕+Denim+Jacket", desc: "Classic light wash, oversized fit, perfect layering." },
+    
+    // Shoes
+    { id: 10, name: "Chunky Platform Sneakers", category: "shoes", priceKes: 5900, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👟+Chunky+Sneakers", desc: "Unisex, breathable mesh, 4cm boost sole." },
+    { id: 11, name: "Leather Loafers (Slip-on)", category: "shoes", priceKes: 5400, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👞+Leather+Loafers", desc: "Classic design, memory foam insole." },
+    { id: 12, name: "Mesh Running Sneakers", category: "shoes", priceKes: 5200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🏃+Running+Shoes", desc: "Ultra-lightweight, non-slip sole." },
+    
+    // Watches (Sample - 6 featured)
+    { id: 13, name: "Naviforce Men's Dual Time Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Naviforce+Dual+Time", desc: "Dual time zone, calendar display, alarm function." },
+    { id: 14, name: "Couple Watches Casual Style", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Couple+Watches", desc: "Elegant matching watch set for couples." },
+    { id: 15, name: "LED Digital Luminescent Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+LED+Digital", desc: "Modern LED display, luminescent feature." },
+    { id: 16, name: "EAGEAET Business Quartz Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+EAGEAET", desc: "Premium business style, precise quartz movement." },
+    { id: 17, name: "Ultra Thin Mesh Belt Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Ultra+Thin", desc: "Ultra-thin profile, stainless steel mesh band." },
+    { id: 18, name: "2026 Automatic Movement Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Automatic+2026", desc: "Self-winding, calendar display, waterproof." },
+    
+    // Tote Bags (Sample - 4 featured)
+    { id: 19, name: "Canvas Everyday Tote Bag", category: "tote bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👜+Canvas+Tote", desc: "Durable canvas, spacious, perfect for daily errands." },
+    { id: 20, name: "Leather Tote Bag (Women)", category: "tote bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👜+Leather+Tote", desc: "Premium genuine leather, elegant design." },
+    { id: 21, name: "Designer Inspired Tote Bag", category: "tote bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👜+Designer+Tote", desc: "Stylish designer-inspired, structured silhouette." },
+    { id: 22, name: "Large Capacity Shopper Tote", category: "tote bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👜+Shopper+Tote", desc: "Extra-large, reinforced handles, fits laptop." },
+    
+    // Hand Bags (Sample - 5 featured)
+    { id: 23, name: "Elegant Satchel Hand Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Satchel", desc: "Classic satchel, top handle, detachable strap." },
+    { id: 24, name: "Crossbody Mini Hand Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Crossbody", desc: "Trendy mini crossbody, adjustable strap." },
+    { id: 25, name: "Quilted Chain Shoulder Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Quilted", desc: "Classic quilted pattern, chain strap." },
+    { id: 26, name: "Bucket Drawstring Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Bucket", desc: "Trendy bucket bag, drawstring closure." },
+    { id: 27, name: "Vegan Leather Flap Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Flap+Bag", desc: "Cruelty-free vegan leather, magnetic snap." }
   ];
 
+  // Format KES currency
   function formatKes(amount) {
+    if (amount === 0 || amount === null) {
+      return 'Price on DM';
+    }
     return 'KES ' + amount.toLocaleString('en-KE');
   }
 
@@ -490,13 +632,18 @@
     if (cat === 'home gadget') return '<i class="fas fa-microchip"></i> Home Gadget';
     if (cat === 'clothes') return '<i class="fas fa-tshirt"></i> Fashion';
     if (cat === 'shoes') return '<i class="fas fa-shoe-prints"></i> Footwear';
+    if (cat === 'watches') return '<i class="fas fa-clock"></i> Watches';
+    if (cat === 'tote bag') return '<i class="fas fa-shopping-bag"></i> Tote Bag';
+    if (cat === 'hand bag') return '<i class="fas fa-handbag"></i> Hand Bag';
     return cat;
   }
 
+  // Render featured (first 8 products from different categories for variety)
   function renderFeatured() {
     const featuredContainer = document.getElementById('featuredGrid');
     if (!featuredContainer) return;
-    const featuredItems = productsCatalog.slice(0, 4);
+    // Get one from each category for variety
+    const featuredItems = productsCatalog.filter(p => [1, 2, 6, 10, 13, 19, 23, 8].includes(p.id));
     featuredContainer.innerHTML = '';
     featuredItems.forEach(prod => {
       const card = document.createElement('div');
@@ -504,14 +651,13 @@
       card.setAttribute('data-id', prod.id);
       const categoryHtml = getCategoryLabel(prod.category);
       card.innerHTML = `
-        <div class="card-img" style="background-image: url('${prod.imagePlaceholder}'); background-size: cover; background-position: center;">
+        <div class="card-img" style="background-image: url('${prod.image}'); background-size: cover; background-position: center;">
           <div class="category-icon">${categoryHtml}</div>
         </div>
         <div class="card-info">
           <h3>${prod.name}</h3>
           <div class="price-row">
             <div class="price">${formatKes(prod.priceKes)}</div>
-            <div class="old-price">${prod.category === 'shoes' ? 'KES 6,500' : ''}</div>
           </div>
           <p>${prod.desc.substring(0, 75)}${prod.desc.length > 75 ? '...' : ''}</p>
           <button class="quick-shop quick-view-btn" data-id="${prod.id}"><i class="fas fa-eye"></i> Quick view</button>
@@ -550,7 +696,7 @@
 
   function openProductModal(product) {
     if (modalImgDiv) {
-      modalImgDiv.style.backgroundImage = `url('${product.imagePlaceholder}')`;
+      modalImgDiv.style.backgroundImage = `url('${product.image}')`;
       modalImgDiv.style.backgroundSize = 'cover';
       modalImgDiv.style.backgroundPosition = 'center';
     }
@@ -559,10 +705,12 @@
     modalPriceSpan.innerText = formatKes(product.priceKes);
     modalTikTokLink.href = 'https://www.tiktok.com/@SJAndCo_KE';
     modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
     modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
   }
 
   if (document.getElementById('closeModalBtn')) {
@@ -572,7 +720,8 @@
 
   renderFeatured();
 
-  console.log('✅ SJ & CO PREMIUM ready | All prices KES | Replace placeholder images with actual product photos for pro look');
+  console.log('✅ SJ & CO Homepage Ready | Featuring all product categories');
+  console.log('📦 Categories: Home Gadgets, Clothes, Shoes, Watches, Tote Bags, Hand Bags');
 </script>
 </body>
 </html>
