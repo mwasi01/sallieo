@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>All Products | SJ & CO — Home • Style • Footwear • Watches</title>
+  <title>All Products | SJ & CO — Home • Style • Footwear • Watches • Bags</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -131,11 +131,11 @@
       margin-top: 12px;
     }
 
-    /* Filters */
+    /* Filters - Scrollable on mobile */
     .filters-bar {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 12px;
       flex-wrap: wrap;
       margin-bottom: 48px;
     }
@@ -143,7 +143,7 @@
     .filter-btn {
       background: white;
       border: 1px solid #e0d6cc;
-      padding: 10px 24px;
+      padding: 10px 20px;
       border-radius: 60px;
       font-weight: 600;
       cursor: pointer;
@@ -347,8 +347,8 @@
       }
 
       .filter-btn {
-        padding: 8px 16px;
-        font-size: 0.75rem;
+        padding: 8px 14px;
+        font-size: 0.7rem;
       }
     }
   </style>
@@ -374,7 +374,7 @@
 <div class="page-header">
   <div class="container">
     <h1><i class="fas fa-store"></i> Complete Collection</h1>
-    <p>Home gadgets • Trendy clothes • Premium footwear • Designer watches — all prices in KES</p>
+    <p>Home gadgets • Trendy clothes • Premium footwear • Designer watches • Tote & Hand Bags — all prices in KES</p>
   </div>
 </div>
 
@@ -385,6 +385,8 @@
     <button class="filter-btn" data-filter="clothes"><i class="fas fa-tshirt"></i> Clothes</button>
     <button class="filter-btn" data-filter="shoes"><i class="fas fa-shoe-prints"></i> Footwear</button>
     <button class="filter-btn" data-filter="watches"><i class="fas fa-clock"></i> Watches</button>
+    <button class="filter-btn" data-filter="tote bag"><i class="fas fa-shopping-bag"></i> Tote Bags</button>
+    <button class="filter-btn" data-filter="hand bag"><i class="fas fa-handbag"></i> Hand Bags</button>
   </div>
 
   <div id="fullProductGrid" class="product-grid"></div>
@@ -416,7 +418,7 @@
 </div>
 
 <script>
-  // ======================== COMPLETE PRODUCT CATALOG WITH ALL WATCHES ========================
+  // ======================== COMPLETE PRODUCT CATALOG WITH BAGS ========================
   const productsCatalog = [
     // ========== HOME GADGETS (Existing) ==========
     { id: 1, name: "Smart RGB LED Strip", category: "home gadget", priceKes: 3200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🌈+LED+Strip", desc: "Music sync, 5m, app-controlled. Perfect for gaming or cozy nights. Easy installation with adhesive backing." },
@@ -436,40 +438,51 @@
     { id: 11, name: "Leather Loafers (Slip-on)", category: "shoes", priceKes: 5400, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👞+Leather+Loafers", desc: "Classic design, memory foam insole, everyday elegance & comfort. Sizes 38-45." },
     { id: 12, name: "Mesh Running Sneakers", category: "shoes", priceKes: 5200, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=🏃+Running+Shoes", desc: "Ultra-lightweight, non-slip sole, breathable mesh upper. Perfect for daily runs or casual wear." },
     
-    // ========== WATCHES (From Your Images - All Added) ==========
-    // Row 1 from first image
+    // ========== WATCHES (From Your Images) ==========
     { id: 13, name: "Couple Watches Casual Style", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Couple+Watches", desc: "Elegant couple watch set, perfect matching accessories for him and her. Great gift idea for anniversaries." },
     { id: 14, name: "Design Watches Luminous", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Luminous+Watch", desc: "Glow-in-the-dark dial, stylish design, perfect for night events. Water resistant and durable." },
     { id: 15, name: "Fashion Three Eyes Couple Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Three+Eyes+Watch", desc: "Chronograph movement with three sub-dials. Sporty yet elegant design for daily wear." },
     { id: 16, name: "5pcs Set Luxury Women Watch Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+5pcs+Watch+Set", desc: "Complete set of 5 luxury women's watches. Multiple styles for any outfit. Great value set." },
     { id: 17, name: "BINBOND Men's Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+BINBOND+Watch", desc: "Premium men's watch from BINBOND. Durable construction with classic design elements." },
     { id: 18, name: "LED Digital Luminescent Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+LED+Digital+Watch", desc: "Modern LED digital display, luminescent feature, perfect for sports and outdoor activities." },
-    
-    // Sports watches from first image
     { id: 19, name: "Sports Edition Chronograph Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Sports+Watch", desc: "Professional sports chronograph, stopwatch function, durable rubber strap, water resistant." },
-    
-    // N/MIFORCE watches from second image
     { id: 20, name: "Naviforce Men's Dual Time Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Naviforce+Dual+Time", desc: "Dual time zone display, calendar display, alarm function. Premium Naviforce quality craftsmanship." },
     { id: 21, name: "Naviforce Men's Digital Analogue", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Naviforce+Digital", desc: "Digital and analogue combination, 30M water resistant. Modern meets classic design." },
-    { id: 22, name: "High Quality 5IN1 Ladies Gift Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+5IN1+Gift+Set", desc: "Complete gift set including watch, bracelet, necklace, earrings. Perfect present for her." },
+    { id: 22, name: "5IN1 Ladies Gift Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+5IN1+Gift+Set", desc: "Complete gift set including watch, bracelet, necklace, earrings. Perfect present for her." },
     { id: 23, name: "Finger Ring Watch for Women", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Ring+Watch", desc: "Unique finger ring watch design. Trendy accessory that also tells time. Adjustable fit." },
-    { id: 24, name: "Men's Adjustable Elastic Quartz Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Elastic+Quartz", desc: "Comfortable elastic band, precise quartz movement, one size fits most wrists." },
-    
-    // Watch sets from third image
-    { id: 25, name: "5-piece Men's Watch And Bracelet Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Men+Set+5pc", desc: "Complete set with watch and matching bracelet. Fashion-forward design." },
-    { id: 26, name: "Analog Wrist Watch for Men Silver", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Silver+Watch", desc: "Stainless steel silver band, classic analog display, black dial. Elegant business style." },
-    { id: 27, name: "4-piece Men's Watch And Bracelet Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Men+Set+4pc", desc: "Coordinated watch and bracelet set. Great for daily wear and special occasions." },
-    { id: 28, name: "2Piece Versatile Business Men Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Business+Set", desc: "Two-piece business watch set. Professional look perfect for office and formal events." },
-    { id: 29, name: "Watch Series Paired With PU Leather Strap Sport Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+PU+Leather+Sport", desc: "Durable PU leather strap, sports design, comfortable for all-day wear." },
-    
-    // Featured watches from fourth image
-    { id: 30, name: "EAGEAET Men Versatile Business Belt Quartz Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+EAGEAET+Business", desc: "Premium EAGEAET brand, versatile business style, leather belt strap, precise quartz movement." },
+    { id: 24, name: "Men's Elastic Quartz Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Elastic+Quartz", desc: "Comfortable elastic band, precise quartz movement, one size fits most wrists." },
+    { id: 25, name: "5-piece Men's Watch & Bracelet Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Men+Set+5pc", desc: "Complete set with watch and matching bracelet. Fashion-forward design." },
+    { id: 26, name: "Analog Silver Watch for Men", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Silver+Watch", desc: "Stainless steel silver band, classic analog display, black dial. Elegant business style." },
+    { id: 27, name: "4-piece Men's Watch & Bracelet Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Men+Set+4pc", desc: "Coordinated watch and bracelet set. Great for daily wear and special occasions." },
+    { id: 28, name: "2-Piece Business Men Watch Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Business+Set", desc: "Two-piece business watch set. Professional look perfect for office and formal events." },
+    { id: 29, name: "PU Leather Strap Sport Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+PU+Leather+Sport", desc: "Durable PU leather strap, sports design, comfortable for all-day wear." },
+    { id: 30, name: "EAGEAET Business Quartz Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+EAGEAET+Business", desc: "Premium EAGEAET brand, versatile business style, leather belt strap, precise quartz movement." },
     { id: 31, name: "Men's Quartz Watch Bracelets Set", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Quartz+Bracelet+Set", desc: "Complete watch and bracelet set. Stylish combination for the modern man." },
-    { id: 32, name: "Ultra Thin Stainless Steel Mesh Belt Quartz Business Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Ultra+Thin+Watch", desc: "Ultra-thin profile, stainless steel mesh band, minimalistic business design." },
-    { id: 33, name: "2026 New Automatic Movement Men's Watch Calendar Waterproof", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Automatic+2026", desc: "Latest 2026 model, automatic self-winding movement, calendar display, waterproof design." }
+    { id: 32, name: "Ultra Thin Mesh Belt Business Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Ultra+Thin+Watch", desc: "Ultra-thin profile, stainless steel mesh band, minimalistic business design." },
+    { id: 33, name: "2026 Automatic Movement Men's Watch", category: "watches", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=⌚+Automatic+2026", desc: "Latest 2026 model, automatic self-winding movement, calendar display, waterproof design." },
+    
+    // ========== NEW: TOTE BAGS ==========
+    { id: 34, name: "Canvas Everyday Tote Bag", category: "tote bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👜+Canvas+Tote", desc: "Durable cotton canvas tote, spacious interior, perfect for shopping, work, or daily errands. Available in multiple colors." },
+    { id: 35, name: "Leather Tote Bag (Women)", category: "tote bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👜+Leather+Tote", desc: "Premium genuine leather tote, elegant design, magnetic snap closure, inner zip pocket. Perfect for office or casual outings." },
+    { id: 36, name: "Beach Straw Tote Bag", category: "tote bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👜+Straw+Tote", desc: "Handwoven straw tote, perfect for beach days, vacations, and summer style. Lightweight and breathable." },
+    { id: 37, name: "Minimalist Nylon Tote", category: "tote bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👜+Nylon+Tote", desc: "Lightweight water-resistant nylon tote, foldable design, great for travel and everyday use." },
+    { id: 38, name: "Designer Inspired Tote Bag", category: "tote bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👜+Designer+Tote", desc: "Stylish designer-inspired tote, structured silhouette, gold hardware, makes a fashion statement." },
+    { id: 39, name: "Large Capacity Shopper Tote", category: "tote bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👜+Shopper+Tote", desc: "Extra-large tote bag, reinforced handles, fits laptop, groceries, and more. Perfect for busy days." },
+    
+    // ========== NEW: HAND BAGS FOR LADIES ==========
+    { id: 40, name: "Elegant Satchel Hand Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Satchel+Bag", desc: "Classic satchel design, top handle with detachable shoulder strap, multiple compartments. Perfect for professionals." },
+    { id: 41, name: "Crossbody Mini Hand Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Crossbody+Bag", desc: "Trendy mini crossbody bag, adjustable strap, perfect for nights out or quick errands. Available in multiple colors." },
+    { id: 42, name: "Clutch Evening Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Clutch+Bag", desc: "Elegant evening clutch, shimmer finish, detachable chain strap, perfect for parties and special occasions." },
+    { id: 43, name: "Top Handle Structured Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Top+Handle", desc: "Structured top handle bag, faux leather, gold hardware, chic and sophisticated for any outfit." },
+    { id: 44, name: "Quilted Chain Shoulder Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Quilted+Bag", desc: "Classic quilted pattern, chain shoulder strap, magnetic closure. Iconic style that never goes out of fashion." },
+    { id: 45, name: "Hobo Crescent Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Hobo+Bag", desc: "Soft crescent hobo design, relaxed silhouette, spacious interior, comfortable shoulder fit." },
+    { id: 46, name: "Woven Bamboo Handle Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Bamboo+Bag", desc: "Unique woven design with bamboo handle, vintage-inspired, perfect for summer and resort wear." },
+    { id: 47, name: "Luxury Tote Hand Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Luxury+Bag", desc: "Premium luxury handbag, soft leather, gold chain accents, makes a bold fashion statement." },
+    { id: 48, name: "Bucket Drawstring Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Bucket+Bag", desc: "Trendy bucket bag with drawstring closure, removable shoulder strap, casual chic style." },
+    { id: 49, name: "Vegan Leather Flap Bag", category: "hand bag", priceKes: 0, image: "https://placehold.co/600x600/e9d6c5/a67c52?text=👛+Flap+Bag", desc: "Cruelty-free vegan leather, flap closure with magnetic snap, organized interior compartments." }
   ];
 
-  // Format KES currency - shows 0 as "Price on Request"
+  // Format KES currency - shows 0 as "Price on DM"
   function formatKes(amount) {
     if (amount === 0 || amount === null) {
       return 'Price on DM';
@@ -483,6 +496,8 @@
     if (cat === 'clothes') return '<i class="fas fa-tshirt"></i> Fashion';
     if (cat === 'shoes') return '<i class="fas fa-shoe-prints"></i> Footwear';
     if (cat === 'watches') return '<i class="fas fa-clock"></i> Watches';
+    if (cat === 'tote bag') return '<i class="fas fa-shopping-bag"></i> Tote Bag';
+    if (cat === 'hand bag') return '<i class="fas fa-handbag"></i> Hand Bag';
     return cat;
   }
 
@@ -595,8 +610,9 @@
   // Initialize
   renderProducts();
 
-  console.log('✅ SJ & CO Products Page Ready | Total ' + productsCatalog.length + ' products including 21+ watches');
-  console.log('⚠️ Watch prices are set to 0 (shows as "Price on DM") — update prices in productsCatalog array');
+  console.log('✅ SJ & CO Products Page Ready | Total ' + productsCatalog.length + ' products');
+  console.log('📦 Categories: Home Gadgets(5), Clothes(4), Shoes(3), Watches(21), Tote Bags(6), Hand Bags(10)');
+  console.log('⚠️ Prices set to 0 show as "Price on DM" — update prices in productsCatalog array');
 </script>
 </body>
 </html>
